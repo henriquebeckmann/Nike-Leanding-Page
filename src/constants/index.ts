@@ -35,6 +35,12 @@ export const statistics = [
   { value: "250k+", label: "Customers" },
 ];
 
+export interface IProducts {
+  imgURL: StaticImageData;
+  name: string;
+  price: string;
+}
+
 export const products = [
   {
     imgURL: shoe4,
