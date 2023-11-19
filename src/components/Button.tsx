@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface ButtonProps {
   label: string;
-  iconURL: string;
+  iconURL?: string;
 }
 
 const Button = ({ label, iconURL }: ButtonProps) => {
@@ -16,13 +16,15 @@ const Button = ({ label, iconURL }: ButtonProps) => {
     >
       {label}
 
-      <Image
-        src={iconURL}
-        alt="arrow right icon"
-        width={20}
-        height={20}
-        className="ml-2 rounded-full w-5 h-5"
-      />
+      {iconURL && (
+        <Image
+          src={iconURL}
+          alt="arrow right icon"
+          width={20}
+          height={20}
+          className="ml-2 rounded-full w-5 h-5"
+        />
+      )}
     </button>
   );
 };
