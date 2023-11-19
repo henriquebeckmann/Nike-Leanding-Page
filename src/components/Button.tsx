@@ -1,18 +1,29 @@
 import Image from "next/image";
+import { ButtonHTMLAttributes } from "react";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
   iconURL?: string;
+  backgroundColor?: string;
+  textColor?: string;
+  borderColor?: string;
+  fullWidth?: boolean;
 }
 
-const Button = ({ label, iconURL }: ButtonProps) => {
+const Button = ({ label, iconURL, backgroundColor, textColor, borderColor, fullWidth, }: ButtonProps) => {
   return (
     <button
-      className="flex justify-center items-center 
+      className={`flex justify-center items-center 
     gap-2 px-7 py-4 
     border rounded-full
     font-montserrat text-lg leading-none 
-    bg-coral-red text-white border-coral-red"
+    ${
+      backgroundColor
+        ? `${backgroundColor} ${textColor} ${borderColor}`
+        : "bg-coral-red text-white border-coral-red"
+    } 
+    ${fullWidth} && "w-full"
+    `}
     >
       {label}
 

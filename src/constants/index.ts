@@ -1,5 +1,25 @@
-import { facebook, instagram, shieldTick, support, truckFast, twitter } from "@public/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "@public/images";
+import {
+  facebook,
+  instagram,
+  shieldTick,
+  support,
+  truckFast,
+  twitter,
+} from "@public/icons";
+import {
+  bigShoe1,
+  bigShoe2,
+  bigShoe3,
+  customer1,
+  customer2,
+  shoe4,
+  shoe5,
+  shoe6,
+  shoe7,
+  thumbnailShoe1,
+  thumbnailShoe2,
+  thumbnailShoe3,
+} from "@public/images";
 import { StaticImageData } from "next/image";
 
 export const navLinks = [
@@ -63,6 +83,12 @@ export const products = [
     price: "$230.20",
   },
 ];
+
+export interface IServices {
+  imgURL: StaticImageData;
+  label: string;
+  subtext: string;
+}
 
 export const services = [
   {
