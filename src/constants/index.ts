@@ -109,6 +109,13 @@ export const services = [
   },
 ];
 
+export interface IReviews {
+  imgURL: StaticImageData;
+  customerName: string;
+  rating: number;
+  feedback: string;
+}
+
 export const reviews = [
   {
     imgURL: customer1,
