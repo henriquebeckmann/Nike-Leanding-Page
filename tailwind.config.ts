@@ -24,6 +24,7 @@ const config: Config = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       colors: {
+        "primary": "#ECEEFF",
         "coral-red": "#FF6452",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
@@ -33,6 +34,8 @@ const config: Config = {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
       },
       backgroundImage: {
+        hero: "url('/images/collection-background.svg')",
+        card: "url('/images/thumbnail-background.svg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
